@@ -6,7 +6,7 @@ app.use(express.json());
 
 // Home route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the API!" });
+  res.json({ message: "Welcome to the API! Check that deployment works!" });
 });
 
 // Health check endpoint
@@ -14,7 +14,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "healthy", timestamp: new Date().toISOString() });
 });
 
-// Echo endpoint - returns whatever you send
+// Echo endpoint
 app.post("/echo", (req, res) => {
   res.json({ received: req.body });
 });
